@@ -30,6 +30,8 @@ services:
             - ./query:/docker-entrypoint-initdb.d
         environment: 
             MYSQL_DATABASE: laravel
+            MYSQL_HOST: %
+            MYSQL_ROOT_HOST: %
             MYSQL_USER: laraveluser
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: secret
