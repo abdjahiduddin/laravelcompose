@@ -27,11 +27,11 @@ services:
             - "4306:3306"
         volumes: 
             - ./mysql:/var/lib/mysql
-            - ./query:/docker-entrypoint-initdb.d
+            - ./query/init.sql:/docker-entrypoint-initdb.d/init.sql
         environment: 
             MYSQL_DATABASE: laravel
-            MYSQL_HOST: %
-            MYSQL_ROOT_HOST: %
+            MYSQL_HOST: "%"
+            MYSQL_ROOT_HOST: "%"
             MYSQL_USER: laraveluser
             MYSQL_PASSWORD: secret
             MYSQL_ROOT_PASSWORD: secret
